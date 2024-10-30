@@ -15,6 +15,7 @@ const AboutUs = () => {
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 pb-12 mb-20">
    <div className="h-[300px] relative">
         <Image
+        alt='hero image'
           src="/about/hero.jpg"
           fill
           className="h-full w-full object-cover opacity-30"

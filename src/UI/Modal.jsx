@@ -1,5 +1,4 @@
 import React from 'react';
-import { MdClose } from 'react-icons/md';
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;

@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/Component/Navbar";
 import { ThemeProvider } from "@/UI/ThemeProvider";
 import Footer from "@/Component/Footer";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -22,13 +23,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <ThemeProvider attribute="class" defaultTheme="system">
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-          </ThemeProvider>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

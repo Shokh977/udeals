@@ -1,7 +1,7 @@
 // src/app/api/auth/signup/route.js
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import {connectDB} from '@/lib/dbConnect'; 
+import connectDB from '@/lib/dbConnect'; 
 import { NextResponse } from 'next/server';
 import User from '@/models/User';
 
@@ -16,15 +16,15 @@ export async function POST(request) {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const newUser =new  User({
+    const user = new User({
       name,
       email,
       password: hashedPassword,
     });
 
-    await newUser.save();
+    await user.save();
 
-    const token = jwt.sign({ userId: newUser._id }, process.env.JWT_SECRET, {
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
       expiresIn: '7d',
     });
 

@@ -5,18 +5,26 @@ import Link from "next/link";
 import Image from "next/image";
 import Navfunctions from "@/UI/Navfunctions";
 import { MenuIcon } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ToggleButton } from "@/UI/ToggleButton";
 import Modal from "@/UI/Modal";
 import { SignUp } from "./auth/SignUp";
+import useStoreAuth from "@/store/useAuthStore";
 
 const Navbar = () => {
 
-
+  const {user, isAuthenticated, isCheckingAuth, checkAuth } = useStoreAuth()
   const [open, setOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    checkAuth();
+  }, [checkAuth]);
+
+  console.log(isAuthenticated, 'authenticated')
+  
+  console.log(user, 'user on navbar')
 
   const handleOpen = () => {
     setOpen((prev) => !prev);
@@ -84,7 +92,7 @@ const Navbar = () => {
           </ul>
         </div>
         {/* conditional */}
-        {true? <Navfunctions /> : <SignUp/>}
+        {isAuthenticated ? <Navfunctions /> : <SignUp/>}
       </div>
 
       {/* Mobile Navbar */}
