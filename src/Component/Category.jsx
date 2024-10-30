@@ -56,7 +56,7 @@ const Category = () => {
     >
             <CarouselItem id={category.id} className="lg:basis-1/4 md:basis-1/2 sm:basis-1">
               <div className="text-center  flex flex-col justify-center items-center gap-4 my-4 cursor-pointer">
-                <Image src={category.imgurl} width={280} height={380} className="rounded-lg shadow-md hover:scale-105 duration-300 border border-gray-200" />
+                <Image src={category.imgurl} alt={category.label} width={280} height={380} className="rounded-lg shadow-md hover:scale-105 duration-300 border border-gray-200" />
                 <p className="text-lg font-semibold">{category.label}</p>
               </div>
             </CarouselItem>

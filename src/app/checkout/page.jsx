@@ -11,7 +11,7 @@ import {
 import Label from "@/UI/Label";
 import Image from "next/image";
 
-export default function page() {
+export default function Page() {
   const products = [
     { id: 1, title: "Product 1", price: 29.99 },
     { id: 2, title: "Product 2", price: 49.99 },

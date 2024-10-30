@@ -39,7 +39,7 @@ const AboutUs = () => {
       <div className="container mx-auto px-4 py-12 text-center">
         <h2 className="text-3xl font-semibold mb-6">Our Story</h2>
         <p className="max-w-3xl mx-auto text-lg leading-relaxed">
-          At <span className="font-bold text-orange-500">Uphill Deals</span>, we're passionate about delivering the best products at unbeatable prices. What started as a small idea turned into a thriving marketplace where customers can discover quality items for their homes, style, and everyday needs.
+          At <span className="font-bold text-orange-500">Uphill Deals</span>, we are passionate about delivering the best products at unbeatable prices. What started as a small idea turned into a thriving marketplace where customers can discover quality items for their homes, style, and everyday needs.
           Our mission is to bring the world best products directly to your doorstep with a seamless shopping experience.
         </p>
       </div>
