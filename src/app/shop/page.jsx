@@ -16,6 +16,7 @@ const Page = () => {
     <div className="h-auto">
       <div className="h-[300px] relative">
         <Image
+        alt='hero image'
           src="/shop/hero.jpg"
           fill
           className="h-full w-full object-cover opacity-30"

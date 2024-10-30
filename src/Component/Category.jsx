@@ -48,6 +48,7 @@ const Category = () => {
         <CarouselContent>
         
           {categories.map((category) => (<motion.div
+          key={category.id}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}

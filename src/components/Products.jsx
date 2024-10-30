@@ -1,6 +1,7 @@
 "use client";
 import { Heart, Share, Share2 } from "lucide-react";
 import { useState } from "react";
+import Image from 'next/image'
 
 const products = [
   {
@@ -137,7 +138,7 @@ const ProductCard = ({ product, onCardClick }) => {
         </span>
       )}
 
-      <img
+      <Image
         src={product.imageUrl}
         alt={product.title}
         className="w-full h-48 object-cover"

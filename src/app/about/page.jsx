@@ -15,7 +15,7 @@ const AboutUs = () => {
     <div className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 pb-12 mb-20">
    <div className="h-[300px] relative">
         <Image
-        alt='hero image'
+          alt='hero image'
           src="/about/hero.jpg"
           fill
           className="h-full w-full object-cover opacity-30"
@@ -40,7 +40,7 @@ const AboutUs = () => {
         <h2 className="text-3xl font-semibold mb-6">Our Story</h2>
         <p className="max-w-3xl mx-auto text-lg leading-relaxed">
           At <span className="font-bold text-orange-500">Uphill Deals</span>, we're passionate about delivering the best products at unbeatable prices. What started as a small idea turned into a thriving marketplace where customers can discover quality items for their homes, style, and everyday needs.
-          Our mission is to bring the world’s best products directly to your doorstep with a seamless shopping experience.
+          Our mission is to bring the world best products directly to your doorstep with a seamless shopping experience.
         </p>
       </div>
 

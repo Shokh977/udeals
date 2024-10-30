@@ -11,7 +11,7 @@ import {
 import Label from "@/UI/Label";
 import Image from "next/image";
 
-export default function Page() {
+export default function page() {
   const products = [
     { id: 1, title: "Product 1", price: 29.99 },
     { id: 2, title: "Product 2", price: 49.99 },
@@ -53,7 +53,7 @@ export default function Page() {
     <div>
       <div className="h-[300px] relative">
         <Image
-        alt='hero image'
+          alt='hero image'
           src="/shop/hero.jpg"
           fill
           className="h-full w-full object-cover opacity-30"

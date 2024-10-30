@@ -8,6 +8,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import Image from "next/image";
 import {useState} from 'react'
 const ProductDetail = () => {
     const product = {
@@ -73,7 +74,7 @@ const ProductDetail = () => {
           <div className="w-full md:w-1/2 flex items-center justify-center gap-6">
           <div className="flex flex-col gap-4 items-center">
               {product.images.map((image, index) => (
-                <img
+                <Image
                   key={index}
                   src={image}
                   alt={`Thumbnail ${index + 1}`}
@@ -82,7 +83,7 @@ const ProductDetail = () => {
                 />
               ))}
             </div>  
-            <img
+            <Image
               src={selectedImage}
               alt={product.name}
               className="max-w-xl h-[400px] object-cover rounded-lg mb-4"
@@ -148,7 +149,7 @@ const ProductDetail = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
           {product.relatedProducts.map((related) => (
             <div key={related.id} className="border rounded-lg p-4">
-              <img src={related.image} alt={related.name} className="w-full h-32 object-cover rounded-lg mb-2" />
+              <Image src={related.image} alt={related.name} className="w-full h-32 object-cover rounded-lg mb-2" />
               <h3 className="text-xl font-semibold">{related.name}</h3>
               <p className="text-lg text-orange-500">${related.price.toFixed(2)}</p>
               <button className="mt-2 bg-orange-500 text-white px-4 py-1 rounded-md hover:bg-orange-600">View Details</button>
